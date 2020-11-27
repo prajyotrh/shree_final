@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>GharGhya</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head> 
+  <body style="padding: 0cm;" >
+
+
+    
+
+     <!-- facebook chat plugin -->
+        <!-- Load Facebook SDK for JavaScript -->
+        <div id="fb-root"></div>
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              xfbml            : true,
+              version          : 'v9.0'
+            });
+          };
+
+          (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+        <!-- Your Chat Plugin code -->
+        <div class="fb-customerchat"
+          attribution=setup_tool
+          page_id="106420034613589">
+        </div>
+
+
+      <!-- whatsapp -->
+
+      <div class="card chat" id="chat" style="height: auto; width: 360px; z-index: 100px!important;" >
+        <div class="card-header" style="height: 100px; padding: 24px 20px; background-color: #095e54;">
+            <button type="button" class="close border-0 " aria-label="Close" id="close">
+                <img src="images/x.svg" alt="" height="24px">
+              </button>
+            <div class="row">
+                <div class="col-2"><img src="" height="52px" width="52px" style="border-radius: 50%;" alt=""></div>
+                <div class="col-10" style="padding-left: 40px;color: white;">
+                    <div class="row" style="font-weight:500; font-size:20px;">Sudhir Patil</div>
+                    <div class="row">Online</div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="card-body" style="background-image: url('images/whatsapp-bg.png');">
+            
+            <div class="card p-4"  style="border-radius: 10px;width: fit-content;">
+                <div class="row" style="font-weight: 600;">
+                    Ghar Ghya
+                </div>
+                <div class="row">
+                    Welcome to gharghya.com
+                </div>
+                <div class="row">
+                    Have any queries ?
+                    feel free to contact us.
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-muted bg-white" style="padding-left: 20px!important;">
+            <div class="row pb-0">
+                <div class="col-9"><input type="text" class="form-control " style="border-radius: 20px;" id="msg" aria-describedby="helpId" placeholder="Type message..."></div>
+                <div class="col-3"><button id="send" type="button" class="btn btn-info" style="border-radius: 100%; background-color: #095e54;"><img src="images/send (2).svg" height="24px"  alt=""></button></div>
+            </div>    
+        </div>
+    </div>
+
+    
+      <div class="whatsapp" id="whatsapp">
+        <h5><img src="images/icons8-whatsapp.svg" alt=""></h5>
+    </div>
+
+    <div id="content">
+
+        <!-- whatsapp chatbot -->
+        <!-- <div class="elfsight-app-521e3fe0-621a-4da4-b21f-f24fc0d99b42" style="position: absolute;" id="whatsapp"></div> -->
+
+       
+
+        <!-- main body -->
+        <div class="container-fluid">
+
+            <!-- navbar -->
+            <div class="container" style="font-family: 'Comfortaa', cursive ;">
+
+              <nav class="navbar navbar-expand-md  navbar-light bg-light shadow fixed-top">
+                <a class="navbar-brand " href="#" ><img src="images/GharGhya_Final_crop.png" id="brand"  height="auto" width="300px" alt=""></a>
+                <button class="navbar-toggler d-md-none d-lg-none bg-dark " type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation"><img src="images/menu.svg"></button>
+                  <div class="collapse navbar-collapse" id="collapsibleNavId">
+                      <ul class="navbar-nav ml-auto  mt-2 mt-lg-0">
+                          <li class="nav-item mr-2">
+                              <a class="nav-link" href="#" style="color: black;">Home <span class="sr-only">(current)</span></a>
+                          </li>
+                          <li class="nav-item mr-2">
+                            <a class="nav-link" href="#builder" style="color: black;">Builders <span class="sr-only">(current)</span></a>
+                        </li>
+                          <li class="nav-item mr-2">
+                              <a class="nav-link" href="#project" style="color: black;">Projects</a>
+                          </li>
+                          <li class="nav-item mr-2">
+                            <a class="nav-link" href="html/home-loan.html" style="color: black;">Loan <span class="sr-only">(current)</span></a>
+                        </li>
+                          <li class="nav-item mr-2">
+                              <a class="nav-link" href="#footer" style="color: black;">Contact Us</a>
+                          </li>
+                      </ul>
+                  </div>
+              </nav>
+
+            </div>
+            <!-- end of navbar -->
+        
+            <!-- home -->
+            <div class="container-fluid" id="home"  >
+             
+                <div class="row home">
+
+                    <div class="col-sm-12 col-md-6 text-center" class="info" data-aos="">
+                        <span class="display-4 " style=" color:#9e1713">Welcome </span>
+                        <div class="col-lg-12 text-center" style="margin-top: 0px; padding-right: 0px; ">
+                          since our opening we have become masters of our craft. Our commitment to quality products and exceptional services.<br>
+                          
+                          <p class="lead" style="margin-top: 100px; margin-bottom: 50px; color:rgb(33, 34, 34); font-weight: 700 !important;">
+                            Looking for a home loan ?<a class="btn  btn-lg" style="margin-left: 10px;background-color: #9e1713; color: white;" href="html/home-loan.html" role="button">Click Here</a>
+                          </p>
+                          
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 text-center">
+                      <img src="images/flats-in-sangli.jpg" height="100%"  width="100%" alt="">
+                    </div>
+                   
+                </div>
+
+            </div>
+            <!-- end of home -->
+
+            <!-- builders -->
+            <div class="container builder" id="builder" style="font-family: 'Comfortaa', cursive ;" >
+              
+                <div class="outer" data-aos="fade-up">
+
+                  <div class="header" style="margin-top:50px">
+
+                    Builders 
+                    <hr class="ml-auto mr-auto" data-aos="fade-up" style=" position: relative; 
+                    border: none; 
+                    height: 4px;
+                    width: 100px;
+                    border-radius: 4px; 
+                    background: #f1595a; ">
+
+                  </div>
+
+                </div>
+
+                <div class="row" style="margin-bottom: 30px;">
+
+                  <div class="col-sm-12 col-md-6 col-xl-4 mb-5" data-aos="fade-up">
+
+                    <div class="media shadow">
+                      
+                      <a class="d-flex align-self-bottom" href="#">
+                          <img src="" alt="">
+                      </a>
+                      <div class="media-body m-2 ">
+                        <h5>Gayatri Const. Group</h5>
+                      </div>
+                      
+                    </div>
+                  
+                    <div class="collapse" data-aos="fade-down">
+                      <div class="card card-body ml-auto shadow mb-5">
+                        <h5 class="mr-auto">Ongoing Projects</h5>
+
+                        <ul class="list-group ">
+                          <li class="text-left ml-3"><a href="html/projects/flats-in-sangli-shree-vastupuram.html" target="blank">Shree Vastupuram</a></li>
+                          <li class="text-left ml-3"><a href="html/projects/row-bunglow-in-sangli-shivdatt-srushti.html" target="blank">Shivdatt Srushti </a></li>
+                          <li class="text-left ml-3"><a href="html/projects/row-bungalow-in-vishrambag-tuljai-srushti.html" target="blank">Tuljai Srushti </a></li>
+                          </ul>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="col-sm-12 col-md-6 col-xl-4 mb-5" data-aos="fade-up">
+
+                    <div class="media shadow">
+                      <a class="d-flex align-self-bottom" href="#">
+                          <img src="" alt="">
+                      </a>
+                      <div class="media-body m-2">
+                        <h5>Shivam Developers</h5>
+                      </div>
+                    </div>
+
+                    <div class="collapse">
+                      <div class="card card-body ml-auto shadow">
+                        <h5 class="mr-auto">Ongoing Projects</h5>
+
+                        <ul class="list-group ">
+                          <li class="text-left ml-3"><a href="html/projects/flats-in-sangli-shivam.html" target="blank">Shivam Campus</a></li>
+                          <li class="text-left ml-3"><a href="html/projects/flats-in-kupwad-krushnkamal.html" target="blank">Krushnkamal APT</a></li>
+
+                          </ul>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="col-sm-12 col-md-6 col-xl-4 mb-5" data-aos="fade-up">
+
+                    <div class="media shadow">
+                      <a class="d-flex align-self-bottom" href="#">
+                          <img src="" alt="">
+                      </a>
+                      <div class="media-body m-2">
+                        <h5>V.D. Vaje Builders</h5>
+                      </div>
+                    </div>
+
+                    <div class="collapse ">
+                      <div class="card card-body ml-auto shadow">
+                        <h5 class="mr-auto">Ongoing Projects</h5>
+  
+                        <ul class="list-group ">
+                          <li class="text-left ml-3"><a href="html/projects/flats-in-sangli-shree-vastupuram.html" target="blank">Shree Vastupuram</a></li>
+                          </ul>
+                      </div>
+                    </div>                    
+
+                  </div>
+                  
+
+                  <div class="col-sm-12 col-md-6 col-xl-4 mb-5" data-aos="fade-up">
+
+                    <div class="media shadow">
+                      <a class="d-flex align-self-bottom" href="#">
+                          <img src="" alt="">
+                      </a>
+                      <div class="media-body m-2">
+                        <h5>Shivshakti Constructions</h5>
+                      </div>
+                    </div>
+
+                    <div class="collapse ">
+                      <div class="card card-body ml-auto shadow">
+                        <h5 class="mr-auto">Ongoing Projects</h5>
+
+                        <ul class="list-group ">
+                          <li class="text-left ml-3"><a href="html/projects/flats-in-sangli-shivam.html" target="blank">Gayatri Gold</a></li>
+                         
+                          </ul>
+                      </div>
+                    </div>
+                    
+
+                  </div>
+
+                <div class="col-sm-12 col-md-6 col-xl-4 mb-5" data-aos="fade-up">
+                  <div class="media shadow">
+                    <a class="d-flex align-self-bottom" href="#">
+                        <img src="" alt="">
+                    </a>
+                    <div class="media-body m-2">
+                      <h5>Om properties</h5>
+                    </div>
+                  </div>
+                  <div class="collapse " >
+                    <div class="card card-body ml-auto shadow">
+                      <h5 class="mr-auto">Ongoing Projects</h5>
+
+                      <ul class="list-group ">
+                        <li class="text-left ml-3"><a href="html/projects/flats-in-sangli-swasti.html" target="blank">Swasti Apartment</a></li>
+                       
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-xl-4 mb-5" data-aos="fade-up">
+                  <div class="media shadow">
+                    <a class="d-flex align-self-bottom" href="#">
+                        <img src="" alt="">
+                    </a>
+                    <div class="media-body m-2">
+                      <h5>Bhagwant Group</h5>
+                    </div>
+                  </div>
+
+                  <div class="collapse ">
+                    <div class="card card-body ml-auto shadow">
+                      <h5 class="mr-auto">Ongoing Projects</h5>
+
+                      <ul class="list-group ">
+                        <li class="text-left ml-3"><a href="html/projects/flats-in-sangli-shivam.html" target="blank">Gayatri Gold</a></li>
+                       
+                        </ul>
+                    </div>
+                  </div>
+              </div>
+
+              
+                </div>
+
+                <div class="row" style="padding-bottom: 100px;" data-aos="fade-up" >
+                  <div class="col text-center">
+                    <a href="html/builders-developers-in-sangli-miraj-kupwad-jaysingpur.html">Read more...</a>
+                  </div>
+                </div>
+
+             
+                         
+
+            </div>
+            <!-- end of builder -->
+
+            <!-- flats -->
+            <div class="container-fluid flats" style="font-family: 'Comfortaa', cursive ;margin-top: 50px; padding-top: 100px;" id="project">
+
+              <div class="container" >
+
+                <div class="outer" data-aos="fade-up" style="margin-bottom: 50px;">
+                  <div class="header">
+                    available projects 
+                    <hr class="ml-auto mr-auto" data-aos="fade-up" style=" position: relative; 
+                  border: none; 
+                  height: 4px;
+                  width: 200px;
+                  border-radius: 4px; 
+                  background: #f1595a; ">
+                  </div>
+                </div>
+
+                <div class="card border-0 shadow mt-3 pl-4 pr-4 pt-2 pb-2" data-aos="fade-up">
+                  <div class="row text-center mt-0 mb-0 ">
+                    <div class="col-sm-12 col-md-3 mt-3 ">
+                      <select class="form-control "  name="city" id="city" onchange="addon(this.is,'area')">
+                        <option value="city">City</option>
+                        <option value="sangli">Sangli</option>
+                        <option value="miraj">Miraj</option>
+                        <option value="kupwad">Kupwad</option>
+                        <option value="jaysingpur">Jaysingpur</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-12 col-md-3 mt-3">
+                      <select class="form-control" name="area" id="area">
+                        <option value="area">Area</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-12 col-md-3 mt-3">
+                      <select class=" form-control" name="type" id="flatType">
+                        <option value="flat">Flat Type</option>
+                        <option value="onebhk">1 BHK</option>
+                        <option value="twobhk">2 BHK</option>
+                        <option value="threebhk">3 BHK</option>
+                        <option value="rowBungalow">Row bungalow</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-12 col-md-3 mt-3 mb-3">
+                      <button class="btn btn-danger  btn-block" style="border-radius: 5px!important;" onclick="search()">Search</button>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="row" id="flats">
+
+                  <div class="col-sm-6 col-md-4 col-xl-3  filter sangli "  onclick="window.open('html/projects/flats-in-vita-gayatri-gold.html','_blank'); ">
+                    <div class="card" >
+                      <img class="card-img-top" src="images/flats-in-vita-gaytri-gold-2.jpg" alt="">
+                        <div class="card-body " style="padding: 0%;" >
+                          
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><img src="images/apartmentLogo.svg" style="padding-right: 5px;" alt=""> Gayatri Gold</li>
+                            <li class="list-group-item"> <img src="images/locationLogo.svg" style="padding-right: 5px;" alt=""> Khanapur road, Vita</li>
+                            <li class="list-group-item"><img src="images/builderLogo.svg"style="padding-right: 5px;" alt=""> Shivshakti Construction</li>
+                            <li class="list-group-item" style="font-weight: 600;"><img src="images/homeLogo.svg"style="padding-right: 5px;" alt=""> 1BHK, 2BHK</li>
+                          </ul>
+                          <!-- <p class="card-title"> <img src="images/homeLogo.svg"style="padding-right: 5px;" alt=""> 1BHK, 2BHK</p> -->
+                        </div>
+                      </div>
+                      </div>
+
+                      <div class="col-sm-6 col-md-4 col-xl-3  filter kupwad" onclick="window.open('html/projects/flats-in-kupwad-krushnkamal.html','_blank'); ">
+                        <div class="card">
+                          <img class="card-img-top" src="images/flats-in-kupwad-krushnkamal.jpg"  alt="" >
+                            <div class="card-body " style="padding: 0%;">
+                                <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><img src="images/apartmentLogo.svg" style="padding-right: 5px;" alt=""> Krushnkamal APT</li>
+                                <li class="list-group-item"> <img src="images/locationLogo.svg" style="padding-right: 5px;" alt=""> Near swati gas, Kupwad</li>
+                                <li class="list-group-item"><img src="images/builderLogo.svg"style="padding-right: 5px;" alt=""> Shivam Developers</li>
+                                <li class="list-group-item" style="font-weight:600;"><img src="images/homeLogo.svg"style="padding-right: 5px;" alt=""> 1BHK</li>
+                              </ul>
+                            </div>
+                          </div>
+                      </div>
+
+                      <div class="col-sm-6 col-md-4 col-xl-3  filter sangli dhamaniRoad" onclick="window.open('html/projects/flats-in-sangli-shivam.html','_blank'); ">
+                        <div class="card">
+                          <img class="card-img-top" src="images/flats-in-sangli-shivam-main-copy.jpg"   alt="">
+                            <div class="card-body " style="padding: 0%;" >
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><img src="images/apartmentLogo.svg" style="padding-right: 5px;" alt=""> Shivam Campus</li>
+                                <li class="list-group-item"> <img src="images/locationLogo.svg" style="padding-right: 5px;" alt="">  Dhamani road, sangli</li>
+                                <li class="list-group-item"><img src="images/builderLogo.svg"style="padding-right: 5px;" alt=""> Shivam Developers</li>
+                                <li class="list-group-item" style="font-weight:600;"><img src="images/homeLogo.svg"style="padding-right: 5px;" alt=""> 1BHK, 2BHK</li>
+                              </ul>
+                            </div>
+                          </div>
+                      </div>
+
+                      <div class="col-sm-6 col-md-4 col-xl-3  filter sangli vishrambag" onclick="window.open('html/projects/flats-in-sangli-shree-Vastupuram.html','_blank'); ">
+                        <div class="card">
+                          <img class="card-img-top" src="images/flats-for-sell-in-sangli-vastupuram.jpg"   alt="">
+                            <div class="card-body " style="padding: 0%;" >
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><img src="images/apartmentLogo.svg" style="padding-right: 5px;" alt=""> Shree Vastupuram</li>
+                                <li class="list-group-item"> <img src="images/locationLogo.svg" style="padding-right: 5px;" alt="">  Vishrambag , sangli</li>
+                                <li class="list-group-item"><img src="images/builderLogo.svg"style="padding-right: 5px;" alt=""> Gayatri construction & V.D.Vaje Builders</li>
+                                <li class="list-group-item" style="font-weight:600;"><img src="images/homeLogo.svg"style="padding-right: 5px;" alt=""> 1BHK, 2BHK</li>
+                              </ul>
+                            </div>
+                          </div>
+                      </div>
+
+                      <div class="col-sm-6 col-md-4 col-xl-3  filter sangli vishrambag" onclick="window.open('html/projects/flats-in-sangli-swasti.html','_blank'); ">
+                        <div class="card">
+                          <img class="card-img-top" src="images/property-in-sangli-swasti.jpg"  alt="">
+                            <div class="card-body " style="padding: 0%;" >
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><img src="images/apartmentLogo.svg" style="padding-right: 5px;" alt=""> Swasti Apartment</li>
+                                <li class="list-group-item"> <img src="images/locationLogo.svg" style="padding-right: 5px;" alt=""> Varanali, Vishrambag, sangli</li>
+                                <li class="list-group-item"><img src="images/builderLogo.svg"style="padding-right: 5px;" alt="">Om Properties </li>
+                                <li class="list-group-item" style="font-weight:600;"><img src="images/homeLogo.svg"style="padding-right: 5px;" alt="">  2BHK, 3BHK</li>
+                              </ul>
+                            </div>
+                          </div>
+                      </div>
+
+                      <div class="col-sm-6 col-md-4 col-xl-3  filter sangli vishrambag rowBungalow" onclick="window.open('html/projects/row-bunglow-in-sangli-shivdatt-srushti.html','_blank'); ">
+                        <div class="card">
+                          <img class="card-img-top" src="images/row-bunglow-in-sangli-shivadatt-srushti-index.png"   alt="">
+                            <div class="card-body " style="padding: 0%;" >
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><img src="images/apartmentLogo.svg" style="padding-right: 5px;" alt=""> Shivdatt srushti</li>
+                                <li class="list-group-item"> <img src="images/locationLogo.svg" style="padding-right: 5px;" alt=""> Vishrambag, sangli</li>
+                                <li class="list-group-item"><img src="images/builderLogo.svg"style="padding-right: 5px;" alt="">Gayatri Developers </li>
+                                <li class="list-group-item" style="font-weight:600;"><img src="images/homeLogo.svg"style="padding-right: 5px;" alt=""> Row Bungalow</li>
+                              </ul>
+                            </div>
+                          </div>
+                      </div>
+
+                      <div class="col-sm-6 col-md-4 col-xl-3  filter sangli vishrambag rowBungalow" onclick="window.open('html/projects/row-bungalow-in-vishrambag-tuljai-srushti.html','_blank'); ">
+                        <div class="card">
+                          <img class="card-img-top" src="images/tuljai-front-page.jpg"   alt="">
+                            <div class="card-body " style="padding: 0%;" >
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><img src="images/apartmentLogo.svg" style="padding-right: 5px;" alt=""> Tuljai srushti</li>
+                                <li class="list-group-item"> <img src="images/locationLogo.svg" style="padding-right: 5px;" alt=""> Vishrambag, sangli</li>
+                                <li class="list-group-item"><img src="images/builderLogo.svg"style="padding-right: 5px;" alt="">Bhagwant Group & Gayatri Cons. Group </li>
+                                <li class="list-group-item" style="font-weight:600;"><img src="images/homeLogo.svg"style="padding-right: 5px;" alt=""> Row Bungalow</li>
+                              </ul>
+                            </div>
+                          </div>
+                      </div>
+
+                </div>
+
+                <div class="row updated" id="abs">
+                </div>
+            
+              </div>
+
+            </div>
+            <!-- End of flats -->
+
+            <!-- Motoo -->
+            <div class="container motto" style="font-family: 'Comfortaa', cursive ; padding-top: 100px; padding-bottom:100px;" >
+
+              <div class="outer" >
+                  <div class="header" data-aos="fade-up">
+                    Our Motto
+                    <hr class="ml-auto mr-auto" data-aos="fade-up" style=" position: relative; 
+                border: none; 
+                height: 4px;
+                width: 120px;
+                border-radius: 4px; 
+                background: #f1595a; ">
+                  </div>
+              </div>
+
+              <div class="row">
+
+                <div class="col-sm-6 col-md-6 col-xl-3 feature" data-aos="fade-up">
+                    <div class="card bg-dark text-light shadow">
+                      <img class="card-img-top" src="images/apertureLogo1.svg" alt="">
+                      <div class="card-body">
+                        <h4 class="card-title text-center" style="color: #f1595a;">Trust</h4>
+                        <ul>
+                          <li class="card-text">Trust is main part in our business.</li><br>
+                          <li class="card-text">We only work with the best builders & developers.</li>
+                        
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-xl-3 feature" data-aos="fade-up">
+                  <div class="card text-light bg-dark shadow">
+                    <img class="card-img-top" src="images/dollar-signLogo1.svg" alt="">
+                    <div class="card-body">
+                      <h4 class="card-title text-center">Loan</h4>
+                      <ul>
+                        <li class="card-text">Quick loan service with our HDFC associative.</li><br>
+                        <li class="card-text">Name : Sudhir Patil <br>Contact : 9527395708<br>Contact : 9834083375</li>
+                      </ul>
+                      <p class="card-text"></p>
+                      <p class="card-text"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-xl-3 feature" data-aos="fade-up">
+                  <div class="card text-light bg-dark shadow">
+                    <img class="card-img-top" src="images/anchorLogo1.svg" alt="">
+                    <div class="card-body">
+                      <h4 class="card-title text-center">Integrity</h4>
+                      <ul>
+                        <li class="card-text">More than 100 flats under one roof.</li>
+                        <li class="card-text">We understand what our customer needs.</li>
+                        <li class="card-text">For us customer satisfaction is of utmost importance.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-xl-3 feature" data-aos="fade-up">
+                  <div class="card text-light bg-dark shadow">
+                    <img class="card-img-top " src="images/commandLogo1.svg" alt="">
+                    <div class="card-body">
+                      <h4 class="card-title text-center">Consistancy</h4>
+                      <ul>
+                        <li class="card-text">Our optimal, integral and cost effective services keeps our clients attached with us. </li>
+                        <li class="card-text">We provide best flats under one platform in sangli, miraj, kupwad & jaysingpur. </li>
+                      </ul>
+                      
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              
+            </div>
+            <!-- end of motto -->
+
+        </div>
+       <!-- End of main body -->
+       
+        <!-- footer -->
+        <div class="container-fluid" style="font-family: 'Comfortaa', cursive ;" data-aos="fade-up">
+
+          <section id="footer">
+            <div class="container">
+              <div class="row text-center text-xs-center text-sm-left text-md-left">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 ">
+                      <h5>Quick links</h5>
+                      <ul class="list-unstyled quick-links">
+                        <li><a href="#home"><img src="images/chevrons-rightLogo.svg">Home</a></li>
+                        <li><a href="#builder"><img src="images/chevrons-rightLogo.svg">Builders</a></li>
+                        <li><a href="#project"><img src="images/chevrons-rightLogo.svg">Projects</a></li>
+                        <li><a href="html/home-loan.html"><img src="images/chevrons-rightLogo.svg">Loan</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 socials">
+                      <h5>Connect With Us</h5>
+                    <ul class="list-unstyled quick-links">
+                      <li class="list-inline-item"><a href="https://www.facebook.com/Ghar-Ghya-106420034613589"><img src="images/facebookLogo.svg" alt="facebook" style="">  </a></li>
+                      <li class="list-inline-item"><a href="#"><img src="images/twitterLogo.svg" alt="twitter"> </a></li>
+                      <li class="list-inline-item"><a href="https://www.instagram.com/ghar.ghya/"><img src="images/instagramLogo.svg" alt="insta"></a></li>
+                      <li class="list-inline-item"><a href="#"><img src="images/linkedinLogo.svg" alt="linkedin"></a></li>
+                    </ul>
+                    </div><br>
+                    <div class="col-xs-12 col-sm-12 ">
+                      <h5>Have a Question ?</h5>
+                    <ul class="list-unstyled quick-links">
+                      <li class="list-item"><img src="images/phoneLogo.svg" alt="">+91 9284088484</li>
+                      <li class="list-item"><img src="images/mailLogo.svg" alt="">gharghya99@gmail.com</li>
+                      <li class="list-item"><img src="images/map-pin.svg" alt=""> Ichalkaranji & Sangli</li>
+                      </ul>
+                    </div>
+                   
+                  </div>
+                </div>
+               
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                  <h5>Contact Us</h5>
+                  <form>
+                    <div class="form-group" >
+                        <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter full name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name = "number" id="number" maxlength="10" minlength="10" size="10" class="form-control" id="exampleInputPassword1" placeholder="Contact number" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="msg" id="message" rows="3" placeholder="Write message..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-light" id="submit">Send</button>
+                    <span class="text-warning" id="success_msg"></span>
+                    <span class="text-warning" id="error_msg"></span>
+                </form>
+                </div>
+                
+              </div>
+          
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-5 mb-0 text-center text-white">
+                  <p class="h6">© All rights are reserved, GharGhya.com</p>
+                  <a class="h6" href="https://www.privacypolicygenerator.info/live.php?token=227V1ttvFOIo0rjyLQ9ZXbMO4gyfw88b" target="_blank" >Privacy Policy</a>
+                </div>
+              </div>	
+            </div>
+          </section>
+          
+        </div>
+        <!-- end of footer -->
+
+    </div>
+
+
+    <!-- whatsapp script -->
+    <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script> -->
+  
+     <!-- Optional JavaScript -->
+    <script type="text/javascript" src="Js/index.js"></script>
+
+     <!-- aos script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+     <!-- animation script -->
+    <script>
+    
+      AOS.init({
+        offset:300,
+        duration:1000,
+      });
+
+   
+    </script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+   
+  </body>
+</html>

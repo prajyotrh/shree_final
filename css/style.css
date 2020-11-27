@@ -1,0 +1,433 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body .container-fluid{
+    padding: 0cm;
+    overflow-x: hidden;
+}
+
+
+
+/* whatsapp */
+
+.chat{
+    position: fixed !important;
+    right: 0px !important;
+    bottom: 0px !important;
+    z-index: 5;
+    margin-right: 10px;
+    margin-bottom: 90px;
+}
+
+.chat input:focus{
+    outline: none;
+}
+
+.chat #close:focus{
+    transform: scale(1.03);
+    outline: none;
+}
+
+
+
+.whatsapp {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    padding-right: 5px;
+    z-index: 5;
+}
+.whatsapp h5 :hover{
+    transform: scale(1.1);
+}
+.whatsapp h5 {
+    color: #20b20f;
+   
+}
+
+.media:hover{
+    transform: scale(1);
+  }
+
+html{
+    scroll-behavior: smooth;
+  }
+
+  .builder{
+    padding-top: 50px;
+  }
+
+  .builder .media{
+      margin-bottom: 0px!important;
+  }
+
+  .builder .card{
+      margin: 0;
+  }
+
+  .collapse {
+    display: none;
+  }
+
+  .collapse:hover{
+      display: inline;
+      transition: ease-in-out 1s!important;
+      
+  }
+      
+  .media:hover + .collapse {
+    display: block;
+    
+
+  }
+  .media h5{
+      text-align: center;
+      font-weight: 700;
+  }
+
+  .row .collapse .card{
+      background-color: #f8f9fa;
+  }
+
+  .flats{
+    padding-top:100px ;
+  }
+
+  .flats .card-body img{
+      height: 24px;
+  }
+
+  /* .flats .card{
+      height: 400px;
+  } */
+
+  .nav-link:hover{
+    font-weight: 700;
+    color: #f1595a !important;
+  }
+
+  /* .card:hover{
+    transform: scale(1.03);
+  } */
+
+  .home .lead a{
+      height: fit-content;
+      padding: 5px 20px;
+  }
+
+.home .lead a:hover{
+    color: #9e1713 !important;
+    background-color: white !important;
+    font-weight: 700;
+}
+  
+
+
+#home {
+    
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 800px;
+}
+
+/* #home img {
+    pointer-events: none;
+    position: absolute;
+    float: left;
+    width: 100%;
+    height:100%;
+} */
+
+
+.home{
+    font-family: 'Comfortaa', cursive ;
+    margin-top: 180px;
+    margin-bottom: 0px;
+    height: 300px;
+}
+
+.outer{
+    width: 100%;
+    text-align: center;
+}
+.outer #myBtnContainer{
+    margin-top: 50px;
+    display: inline-block;
+    
+}
+
+.outer #sangliBtn{
+    display: inline-block;
+}
+
+.outer .header{
+    font-size: 30px;
+    /* margin-top: 30px; */
+}
+
+.home .heading{
+    margin-top: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* .home .sub-heading1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:30px;
+    color: white;
+    margin-top: 20px;
+}
+
+.home .sub-heading2{
+    font-size:20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+} */
+
+.flats{
+    background-color: #f8f9fa;
+}
+
+.flats .row{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+
+.filter{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.filter:hover{
+    transform:scale(1.02);
+    transition: ease-in-out;
+}
+
+.show {
+display: block;
+}
+
+
+/* Style the buttons */
+.btn {
+border: none;
+margin-right: 10px;
+border-radius: 20px !important;
+padding: 12px 16px;
+background-color: #f1f1f1;
+cursor: pointer;
+}
+
+.btn:hover {
+background-color: #ddd;
+border: none;
+}
+
+.btn.active {
+background-color: grey;
+color: white !important;
+border: none;
+border: 0cm !important;
+}
+
+
+
+/* Motto*/
+
+.motto .row{
+    margin-top:30px ;
+    margin-bottom: 30px;
+}
+
+.motto .card{
+    height: 350px;
+}
+
+.motto .card h4{
+    color: #f1595a;
+}
+
+.motto .feature:hover{
+   color: violet;
+}
+
+
+    /* Footer */
+section {
+    padding-top: 30px ;
+    padding-bottom: 10px;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer {
+        background: #007b5e !important; 
+}
+#footer h5{
+    font-weight: 600;
+    padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+    padding: 3px 0;
+    
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+    font-size:25px;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+    font-size:30px;
+    margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+    color:#ffffff;
+}
+
+#footer ul.quick-links li{
+    color :white;
+}
+#footer ul.quick-links li img{
+   margin-right: 10px;
+}
+
+#footer .socials li img{
+    background-color: #40b99d;
+    border-radius: 100%;
+    padding: 5px;
+}
+
+#footer ul.social li a:hover{
+    color:#eeeeee;
+}
+#footer ul.quick-links li{
+    padding: 3px 0;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+    padding: 3px 0;
+    margin-left:5px;
+    font-weight:500;
+}
+#footer ul.quick-links li a i{
+    margin-right: 10px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+
+
+@media(max-width:336px) and (min-width:180px){
+    .navbar{
+        width: 100%;
+    }
+    #brand{
+        height: auto;
+        width: 100px;
+    }
+    
+
+} 
+
+@media(min-width:336px) and (max-width:576px ){
+    
+    #brand{
+        height: auto;
+        width: 150px;
+    }
+}
+@media(min-width:576) and (max-width:767px ){
+    #brand{
+        height: auto;
+        width: 200px;
+    }
+}
+
+@media(min-width:767) and (max-width:1200px ){
+    #brand{
+        height: auto;
+        width: 200px;
+    }
+}
+
+@media (max-width:767px){
+    #footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}
+
+.builder .header{
+    /* margin-top: 50px; */
+    margin-bottom: 50px;
+}
+
+.builder a{
+    color:#f1595a ;
+}
+
+.builder .media{
+    margin-bottom: 20px;
+    border: none;
+}
+
+.builder .collapse{
+    margin-bottom: 30px;
+}
+
+.builder a:hover{
+    text-decoration: none;
+    color:#f1595a;
+    font-size: 15px;
+}
+
+/* motto */
+
+.motto .row{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.motto .feature{
+    margin-top: 20px;
+    margin-bottom: 20px; 
+}
+
+.motto .feature img{
+    height: 48px;
+    width: 48px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.motto .feature ul li{
+    margin-left: 10px;
+}
+

@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Swasti Apartment</title>
+    <!-- Required meta tags -->
+    <style>
+      *{
+          overflow-x: hidden;
+          scroll-behavior: smooth;
+      }
+      .container-fluid{
+          padding: 0px;
+          margin: 0px;
+      }
+      
+      .nav-link:hover{
+          font-weight: 700;
+        color: #f1595a !important;
+      }
+   
+    
+      @media(min-width:336px) and (max-width:576px ){
+          
+          #brand{
+              height: auto;
+              width: 150px;
+          }
+      }
+      @media(min-width:576) and (max-width:767px ){
+          #brand{
+              height: auto;
+              width: 200px;
+          }
+      }
+      
+      @media(min-width:767) and (max-width:1200px ){
+          #brand{
+              height: auto;
+              width: 200px;
+          }
+      }
+      
+      .outer{
+          width: 100%;
+          text-align: center;
+      }
+      
+      .outer .header{
+          font-size: 30px;
+          padding-top: 30px;
+      }
+      
+                 /* Footer */
+      section {
+          padding-top: 30px ;
+          padding-bottom: 10px;
+      }
+      
+      section .section-title {
+          text-align: center;
+          color: #007b5e;
+          margin-bottom: 50px;
+          text-transform: uppercase;
+      }
+      #footer {
+              background: #007b5e !important; 
+      }
+      #footer h5{
+          font-weight: 600;
+          padding-left: 10px;
+          border-left: 3px solid #eeeeee;
+          padding-bottom: 6px;
+          margin-bottom: 20px;
+          color:#ffffff;
+      }
+      #footer a {
+          color: #ffffff;
+          text-decoration: none !important;
+          background-color: transparent;
+          -webkit-text-decoration-skip: objects;
+      }
+      #footer ul.social li{
+          padding: 3px 0;
+          
+      }
+      #footer ul.social li a i {
+          margin-right: 5px;
+          font-size:25px;
+          -webkit-transition: .5s all ease;
+          -moz-transition: .5s all ease;
+          transition: .5s all ease;
+      }
+      #footer ul.social li:hover a i {
+          font-size:30px;
+          margin-top:-10px;
+      }
+      #footer ul.social li a,
+      #footer ul.quick-links li a{
+          color:#ffffff;
+      }
+      
+      #footer ul.quick-links li{
+          color :white;
+      }
+      #footer ul.quick-links li img{
+         margin-right: 10px;
+      }
+      
+      #footer .socials li img{
+          background-color: #40b99d;
+          border-radius: 100%;
+          padding: 5px;
+      }
+      
+      #footer ul.social li a:hover{
+          color:#eeeeee;
+      }
+      #footer ul.quick-links li{
+          padding: 3px 0;
+          -webkit-transition: .5s all ease;
+          -moz-transition: .5s all ease;
+          transition: .5s all ease;
+      }
+      #footer ul.quick-links li:hover{
+          padding: 3px 0;
+          margin-left:5px;
+          font-weight:500;
+      }
+      #footer ul.quick-links li a i{
+          margin-right: 10px;
+      }
+      #footer ul.quick-links li:hover a i {
+          font-weight: 700;
+      }
+      
+      
+      .flats{
+          background-color: #f8f9fa;
+      }
+      
+      .flats .row{
+          margin-top: 50px;
+          margin-bottom: 50px;
+      }
+      
+      .filterDiv {
+          color: #000;
+          margin-top: 20px;
+          margin-bottom: 20px;
+      
+      } 
+      
+      .filterDiv:hover{
+          transform:scale(1.02);
+          transition: ease-in-out;
+      }
+      
+      .show {
+      display: block;
+      }
+      
+      
+          </style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body style="font-family: 'Comfortaa', cursive ;" onload="myfunction()" >
+    
+
+    <!-- loader -->
+    <div class="spinner-grow text-danger text-center" role="status" id="loader" style="  margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;" >
+      <span class="sr-only">Loading...</span>
+    </div>
+
+    <!-- modal -->
+    <div class="modal animate__animated animate__swing animate__slow " id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+            form
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="content">
+
+     
+    <div class="container-fluid" style="padding:0px">
+
+      <!-- navbar -->
+        
+          <nav class="navbar navbar-expand-md  navbar-light bg-light shadow ">
+            <a class="navbar-brand " href="#" ><img src="../../images/GharGhya_Final_crop.png" id="brand"  height="auto" width="300px" alt=""></a>
+            <button class="navbar-toggler d-md-none d-lg-none bg-dark " type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation"><img src="../../images/menu.svg"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId" style="font-family: 'Comfortaa', cursive ;">
+                <ul class="navbar-nav ml-auto  mt-2 mt-lg-0">
+                    <li class="nav-item mr-2">
+                        <a class="nav-link" href="#" style="color: black;">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mr-2">
+                        <a class="nav-link" href="#footer" style="color: black;">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+
+
+      <div class="container-fluid" style=" padding: 0px;" >
+        <img src="../../images/property-in-sangli-swasti.jpg"  class="" alt="" width="100%" height="auto">
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="outer">
+            <div class="header">
+             <b> Swasti Apartment</b>
+              
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-xl-8">
+              
+             <div class="row mt-3 pl-3" >
+              <h4>Description
+                <hr class="ml-auto mr-auto" style=" position: relative; 
+              border: none; 
+              height: 4px;
+              width: 100px;
+              border-radius: 4px; 
+              background: #f1595a; ">
+              </h4>
+              <p>Swasti Apartment by <span style="color: red;">Om properties </span>
+                is a commercial and residential project. This project is situated in vishrambag sangli.  </p>
+             </div>
+
+
+             <div class="row mt-3 pl-3">
+              
+              <h4>Floor Plan
+              <hr class="ml-auto mr-auto" style=" position: relative; 
+              border: none; 
+              height: 4px;
+              width: 100px;
+              border-radius: 4px; 
+              background: #f1595a; "></h4>
+            </div>
+
+            <div class="row mt-3 mb-3  pl-3" >
+                <img src="../../images/flats-in-sangli-swasti-apartment-floor-plan.jpg" height="400px" alt="">
+            </div>
+
+              <div class="row mt-3 pl-3">
+                <h4>Location
+                    <hr class="ml-auto mr-auto" style=" position: relative; 
+                    border: none; 
+                    height: 4px;
+                    width: 100px;
+                    border-radius: 4px; 
+                    background: #f1595a; "></h4>
+            </div>
+            <div class="row mt-3 mb-3  pl-3" >
+                <img class="pr-3"src="../../images/flat-for-sale-in-sangli-swasti-location.jpg" height="400px" alt="">
+            </div>
+           
+              <div class="row mt-3 pl-3"><h4>Amenities
+                <hr class="ml-auto mr-auto" style=" position: relative; 
+                border: none; 
+                height: 4px;
+                width: 100px;
+                border-radius: 4px; 
+                background: #f1595a; ">
+              </h4></div>
+  
+              <div class="row mb-5 pl-3"style="font-family: 'Rajdhani', sans-serif;">
+                
+                <div class="col-sm-6  " >
+                  <div class="row"><img src="../../images/check-circle.svg" class="mr-2 mb-2" alt="">सुंदर व आकर्षक एलेव्हेशन </div>
+                  <div class="row"><img src="../../images/check-circle.svg" class="mr-2 mb-2" alt="">प्रशस्त हवेशीर फ्लॅट्स </div>
+                  <div class="row"><img src="../../images/check-circle.svg" class="mr-2 mb-2" alt="">सोलर नेट मिटरींग </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="row"><img src="../../images/check-circle.svg" class="mr-2 mb-2" alt="">सी.सी.टी.व्ही कॅमेरा </div>
+                  <div class="row"><img src="../../images/check-circle.svg" class="mr-2 mb-2" alt="">प्रशस्त टू व्हीलर, फोर व्हीलर पार्किंग </div>
+                  <div class="row"><img src="../../images/check-circle.svg" class="mr-2 mb-2" alt="">लिफ्ट बॅटरी बॅकअपसह </div>
+                </div>
+                <div class="col-sm-6 ">
+                  <div class="row"><img src="../../images/check-circle.svg" class="mr-2 mb-2" alt="">प्रशस्त एंट्रन्स लॉबी </div>
+                 </div>
+              </div>
+
+
+
+          </div>
+          <div class="col-sm-12 col-md-12 col-xl-4">
+            <div class="card text-left shadow">
+              <div class="card-body">
+                <h4 class="card-title text-center">Specialization
+                  <hr class="ml-auto mr-auto" style=" position: relative; 
+                  border: none; 
+                  height: 4px;
+                  width: 100px;
+                  border-radius: 4px; 
+                  background: #f1595a; ">
+                </h4>
+                <div  style="font-family: 'Rajdhani', sans-serif;">
+                    <h6><img src="../../images/bookmark.svg"> शांत व उत्तम परिसर   </h6>
+                    <h6><img src="../../images/bookmark.svg"> विश्रामबाग रेल्वे स्टेशन पासून २ मि.अंतरावर  </h6>
+                    <h6><img src="../../images/bookmark.svg">पोद्दार स्कुल, कॉलेजेस यांच्यापासून ५ मि. अंतरावर  </h6>
+                    <h6><img src="../../images/bookmark.svg"> शासकीय कार्यालय व कोर्टापासून जवळ </h6>
+                    <h6><img src="../../images/bookmark.svg"> पोलीस हेड क्वॉर्टर जवळ असल्यामुळे परिसर सुरक्षित </h6>
+                </div>
+                
+               
+              </div>
+            </div>
+
+            <div class="card text-left shadow mt-5 mb-5">
+                <div class="card-body">
+                  <h4 class="card-title text-center"> Flat Details
+                    <hr class="ml-auto mr-auto" style=" position: relative; 
+                    border: none; 
+                    height: 4px;
+                    width: 100px;
+                    border-radius: 4px; 
+                    background: #f1595a; ">
+                  </h4>
+                  
+                  <table class="table"  style="font-family: 'Rajdhani', sans-serif;">
+                    <thead>
+                      <tr>
+                        <th scope="col">Type</th>
+                        <th scope="col">Units</th>
+                        <th scope="col">Area (Sq. Ft)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">2BHK</th>
+                        <td></td>
+                        <td>860 | 915 | 960 </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3BHK</th>
+                        <td></td>
+                        <td>1065 | 1100  </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                </div>
+              </div>
+            
+
+            <div class="card text-left shadow mt-5 mb-5" >
+              <div class="card-body">
+                <h4 class="card-title text-center">Contact Details
+                  <hr class="ml-auto mr-auto" style=" position: relative; 
+                  border: none; 
+                  height: 4px;
+                  width: 100px;
+                  border-radius: 4px; 
+                  background: #f1595a; ">
+                </h4>
+              </div>
+              <div class="card-body" style="font-family: 'Rajdhani', sans-serif;">
+                
+                <h6 style="overflow-y: hidden;"><b>Office Address :</b></h6>
+
+               
+                <p >
+                    फ्लॅट नं, G1 'ओमकार' अपार्टमेंट, वारणाली रोड, ८ वी गल्ली, विश्रामबाग, सांगली</p>
+
+                 
+                  
+                  <p class="text-muted">संतोष अष्टेकर</p>
+                  <p><img src="../../images/flats-in-sangli-phone.svg" alt="" height="24px" width="24px"> 9823150220 </p>
+                  
+                  <p class="text-muted">विकास लागू </p>
+                  <p><img src="../../images/flats-in-sangli-phone.svg" alt="" height="24px" width="24px"> 9823011565 </p>
+                  
+              </div>
+            </div>
+
+            <div class="card text-left shadow mt-5 mb-5">
+              <div class="card-body">
+                <h4 class="card-title text-center">Home Loan
+                  <hr class="ml-auto mr-auto" style=" position: relative; 
+                  border: none; 
+                  height: 4px;
+                  width: 100px;
+                  border-radius: 4px; 
+                  background: #f1595a; ">
+                </h4>
+            
+                  <p>
+                    We offer you quick and easy process. 
+                  </p>
+                  <h6><b>Required home loan ? <br><br> Contact with our HDFC associative - </b> <a href="../home-loan.html" style="text-decoration:none; color:#f1595a">Click here</a></h6>
+                  
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container-fluid" style="font-family: 'Comfortaa', cursive ; padding: 0px;">
+
+      <section id="footer">
+        <div class="container">
+          <div class="row text-center text-xs-center text-sm-left text-md-left">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 ">
+                  <h5>Quick links</h5>
+                  <ul class="list-unstyled quick-links">
+                    <li><a href="#"><img src="../../images/chevrons-rightLogo.svg">Home</a></li>
+                    <li><a href="../builders-developers-in-sangli-miraj-kupwad-jaysingpur.html"><img src="../../images/chevrons-rightLogo.svg">Builders</a></li>
+                    <li><a href="../../index.html#project"><img src="../../images/chevrons-rightLogo.svg">Projects</a></li>
+                    <li><a href="../home-loan.html"><img src="../../images/chevrons-rightLogo.svg">Loan</a></li>
+                  </ul>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 socials">
+                  <h5>Connect With Us</h5>
+                <ul class="list-unstyled quick-links">
+                  <li class="list-inline-item"><a href="https://www.facebook.com/Ghar-Ghya-106420034613589"><img src="../../images/facebookLogo.svg" alt="facebook" style="">  </a></li>
+                  <li class="list-inline-item"><a href="#"><img src="../../images/twitterLogo.svg" alt="twitter"> </a></li>
+                  <li class="list-inline-item"><a href="https://www.instagram.com/ghar.ghya/"><img src="../../images/instagramLogo.svg" alt="insta"></a></li>
+                  <li class="list-inline-item"><a href="#"><img src="../../images/linkedinLogo.svg" alt="linkedin"></a></li>
+                </ul>
+                </div><br>
+                <div class="col-xs-12 col-sm-12 ">
+                  <h5>Have a Question ?</h5>
+                <ul class="list-unstyled quick-links">
+                  <li class="list-item"><img src="../../images/phoneLogo.svg" alt="">+91 9284088484</li>
+                  <li class="list-item"><img src="../../images/mailLogo.svg" alt="">gharghya99@gmail.com</li>
+                  <li class="list-item"><img src="../../images/map-pin.svg" alt=""> Ichalkaranji & Sangli</li>
+                  </ul>
+                </div>
+               
+              </div>
+            </div>
+           
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <h5>Contact Us</h5>
+              <form>
+                <div class="form-group" >
+                    <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter full name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name = "number" id="number" maxlength="10" minlength="10" size="10" class="form-control" id="exampleInputPassword1" placeholder="Contact number" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="msg" id="message" rows="3" placeholder="Write message..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-light" id="submit">Send</button><br>
+                <span class="text-warning" id="success_msg"></span>
+                <span class="text-warning" id="error_msg"></span>
+            </form>
+            </div>
+            
+          </div>
+      
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-5 mb-0 text-center text-white">
+              <p class="h6">© All rights are reserved, GharGhya.com</p>
+              
+            </div>
+          </div>	
+        </div>
+      </section>
+      
+    </div>
+
+    </div>
+    
+  
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+      <!-- Optional JavaScript -->
+      <script>
+      
+        //loader
+    
+        var loader = document.getElementById('loader');
+        var main = document.getElementById('content');
+        var wp = document.getElementById('whatsapp');
+        main.style.display="none";
+        function myfunction(){
+          setTimeout(function(){
+            loader.style.display="none";
+            main.style.display="block";
+          },2000);
+        
+        }
+
+        // modal
+
+        $(document).ready(function(){
+        
+          setTimeout(function(){
+            $('#contact').modal('show');
+          },5000)
+
+        });
+    
+         //contact us form
+    
+         $("form").submit(function(){
+            var post = $('form').serialize();
+            $('#submit').addClass('disabled');
+    
+            $.post('../../php/form1.php', post, function(data){
+    
+            $("#success_msg").text(data);
+            
+    
+          setTimeout(function() {
+                $("#success_msg").fadeOut().empty();
+                }, 3000);
+    
+                $('#submit').removeClass('disabled');
+                $('form').trigger("reset");
+                if(data.match('success') != null)
+                {
+                    $("#error_msg").text(data);   
+                    setTimeout(function() {
+                    $("#success_msg").fadeOut().empty();
+                    }, 3000);
+                }
+            });
+          return false;
+          });
+        </script>
+  
+  </body>
+</html>

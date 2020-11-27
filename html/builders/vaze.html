@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>vaze builders</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+*{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.nav-link:hover{
+  color: #f1595a !important;
+  font-weight: 600;
+}
+        .container-fluid{
+            padding: 0px;
+            margin: 0px;
+        }
+
+  
+
+
+@media(min-width:336px) and (max-width:576px ){
+    
+    #brand{
+        height: auto;
+        width: 150px;
+    }
+}
+@media(min-width:576) and (max-width:767px ){
+    #brand{
+        height: auto;
+        width: 200px;
+    }
+}
+
+@media(min-width:767) and (max-width:1200px ){
+    #brand{
+        height: auto;
+        width: 200px;
+    }
+}
+
+.outer{
+    width: 100%;
+    text-align: center;
+}
+
+.outer .header{
+    font-size: 30px;
+    padding-top: 30px;
+}
+
+           /* Footer */
+section {
+    padding-top: 30px ;
+    padding-bottom: 10px;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer {
+        background: #007b5e !important; 
+}
+#footer h5{
+  font-weight: 600;
+    padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+    padding: 3px 0;
+    
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+    font-size:25px;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+    font-size:30px;
+    margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+    color:#ffffff;
+}
+
+#footer ul.quick-links li{
+    color :white;
+}
+#footer ul.quick-links li img{
+   margin-right: 10px;
+}
+
+#footer .socials li img{
+    background-color: #40b99d;
+    border-radius: 100%;
+    padding: 5px;
+}
+
+#footer ul.social li a:hover{
+    color:#eeeeee;
+}
+#footer ul.quick-links li{
+    padding: 3px 0;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+    padding: 3px 0;
+    margin-left:5px;
+    font-weight:500;
+}
+#footer ul.quick-links li a i{
+    margin-right: 10px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+
+.flats{
+    background-color: #f8f9fa;
+}
+
+.flats .row{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.filterDiv {
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+} 
+
+.filterDiv:hover{
+    transform:scale(1.02);
+    transition: ease-in-out;
+}
+
+.show {
+display: block;
+}
+
+
+    </style>
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body style="font-family: 'Comfortaa', cursive ;" onload="myfunction()">
+
+    <!-- loader -->
+    <div class="spinner-grow text-danger text-center" role="status" id="loader" style="  margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;" >
+      <span class="sr-only">Loading...</span>
+    </div>
+
+      <div id="content">
+
+    <!-- navbar -->
+    <div class="container-fluid">
+        <div class="container" style="font-family: 'Comfortaa', cursive ;">
+            <nav class="navbar navbar-expand-md  navbar-light bg-light shadow fixed-top">
+              <a class="navbar-brand " href="#" ><img src="../../images/GharGhya_Final_crop.png" id="brand"  height="auto" width="300px" alt=""></a>
+              <button class="navbar-toggler d-md-none d-lg-none bg-dark " type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                  aria-expanded="false" aria-label="Toggle navigation"><img src="../../images/menu.svg"></button>
+              <div class="collapse navbar-collapse" id="collapsibleNavId">
+                  <ul class="navbar-nav ml-auto  mt-2 mt-lg-0">
+                      <li class="nav-item mr-2">
+                          <a class="nav-link" href="#" style="color: black;">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item mr-2">
+                        <a class="nav-link" href="#current" style="color: black;">Ongoing projects <span class="sr-only">(current)</span></a>
+                    </li>
+                      <li class="nav-item mr-2">
+                          <a class="nav-link" href="#footer" style="color: black;">Contact Us</a>
+                      </li>
+                  </ul>
+              </div>
+          </nav>
+          </div>
+    </div>
+
+    <!-- home -->
+    <div class="container-fluid home" style="background: #cc2b5e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    padding-top: 100px; margin-top: 0%;margin-bottom:0% ; overflow-y: hidden; height: auto;">
+        <div class="row ">
+                <div class="col-sm-12 col-md-12 display-4 text-center " style=" margin-top:100px;">
+                V.D.Vaje
+                </div>
+            
+        </div>
+
+       
+            <div class="container">
+        
+                    <div class="row " style="margin-bottom: 80px;margin-top: 100px;">
+                        <div class="col-sm-12 col-md-6 col-xl-4 loan mt-4">
+        
+                          <div class="media shadow" data-toggle="collapse" href="#vaze" role="button" aria-expanded="false" aria-controls="collapseExample">
+      
+                              <div class="media-body" style="background: white; padding: 10px;">
+                                  <br>
+                              <h5 class="text-center"><b style="color:  #37365b;">Qualities</b></h5><hr>
+                              <ul class="text-left" style="margin-left:0px;">
+                                  <li ><img src="../../images/pen-tool.svg" height="24px" class="m-2">Best builder award 2020 </li>
+                                  <li><img src="../../images/pen-tool.svg" height="24px" class="m-2">Best target achiever</li>
+                                  <li><img src="../../images/pen-tool.svg" height="24px" class="m-2">10+ years of experiance</li>  
+                              </ul>
+                              </div>
+                          </div>
+        
+                        </div>
+    
+                        <div class="col-sm-12 col-md-6 col-xl-4 loan mt-4">
+        
+                        <div class="media shadow" data-toggle="collapse" href="#vaze" role="button" aria-expanded="false" aria-controls="collapseExample">
+    
+                            <div class="media-body" style="background: white; padding: 10px;">
+                                <br>
+                            <h5 class="text-center"><b style="color:  #37365b;">Office</b></h5><hr>
+                            <ul class="text-left" style="margin-left: 0px;">
+                                <li class="m-2"><img src="../../images/locationLogo.svg" height="24px" class="mr-2" alt=""><b>Varad Bhagwant Developers C/o Pramod D. Shinde</b> </li>
+                                <li class="m-2">Lord Bhagwant  3/4, New Timber Area,Sangli.</li>
+                                
+                            </ul>
+                            </div>
+                        </div>
+        
+                        </div>
+        
+                        <div class="col-sm-12 col-md-6 col-xl-4 loan mt-4">
+        
+                        <div class="media shadow" data-toggle="collapse" href="#vaze" role="button" aria-expanded="false" aria-controls="collapseExample">
+    
+                            <div class="media-body" style="background: white; padding: 10px;">
+                                <br>
+                            <h5 class="text-center"><b style="color:  #37365b;">Contact Details</b></h5><hr>
+                            <ul class="text-left" style="margin-left: 0px;">
+                                <li class="m-2"><b>Omkar Patil:</b>  9527395708</li>
+                                <li class="m-2"><b>Nilesh Patiil :</b>  9527395708</li>
+                                <li class="m-2"><b>Office no. :</b>  0230-23560</li><br>
+                            </ul>
+                            </div>
+                        </div>
+        
+                        </div>
+                        
+                    </div>
+                    
+            </div>
+
+    </div>
+
+    <!-- current projects -->
+
+    <div class="container-fluid" style="padding:0px 0px;margin-top: 0px;"  id="current">
+        <div class="container-fluid flats" style="font-family: 'Comfortaa', cursive ;" id="project">
+
+            <div class="container" >
+    
+                <div class="outer">
+                  <div class="header" style="margin-top: 100px ;">
+                    available projects 
+                    <hr class="ml-auto mr-auto" style=" position: relative; 
+                  border: none; 
+                  height: 4px;
+                  width: 200px;
+                  border-radius: 4px; 
+                  background: #f1595a; ">
+                  </div>
+                   
+                </div>
+                
+              
+    
+                <div class="row" style="overflow-y: hidden; margin-bottom: 100px;">
+    
+                    <div class="col-sm-6 col-md-4 col-xl-3  filterDiv sangli vishrambag" onclick="window.open('/html/details.html','_blank'); ">
+                  <div class="card" id="abs">
+                    <img class="card-img-top" src="../../images/1074402072SHREE PROPERTIES main img.jpg" alt="">
+                      <div class="card-body " >
+                        <h6 class="card-title"> <img src="../../images/apartmentLogo.svg" style="padding-right: 5px;" alt=""> Shree Properties</h6>
+                        <h6 class="card-title"> <img src="../../images/locationLogo.svg" style="padding-right: 5px;" alt=""> Vijaynagar, sangli</h6>
+                        <h6 class="card-title"> <img src="../../images/builderLogo.svg"style="padding-right: 5px;" alt=""> SS Infra</h6>
+                        <hr>
+                        <p class="card-title"> <img src="../../images/homeLogo.svg"style="padding-right: 5px;" alt=""> 1BHK, 2BHK</p>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-xl-3  filterDiv sangli vishrambag" onclick="window.open('/html/details.html','_blank'); ">
+                        <div class="card" id="abs">
+                          <img class="card-img-top" src="../../images/1074402072SHREE PROPERTIES main img.jpg" alt="">
+                            <div class="card-body " >
+                              <h6 class="card-title"> <img src="../../images/apartmentLogo.svg" style="padding-right: 5px;" alt=""> Shree Properties</h6>
+                              <h6 class="card-title"> <img src="../../images/locationLogo.svg" style="padding-right: 5px;" alt=""> Vijaynagar, sangli</h6>
+                              <h6 class="card-title"> <img src="../../images/builderLogo.svg"style="padding-right: 5px;" alt=""> SS Infra</h6>
+                              <hr>
+                              <p class="card-title"> <img src="../../images/homeLogo.svg"style="padding-right: 5px;" alt=""> 1BHK, 2BHK</p>
+                            </div>
+                          </div>
+                          </div>
+
+                          <div class="col-sm-6 col-md-4 col-xl-3  filterDiv sangli vishrambag" onclick="window.open('/html/details.html','_blank'); ">
+                            <div class="card" id="abs">
+                              <img class="card-img-top" src="../../images/1074402072SHREE PROPERTIES main img.jpg" alt="">
+                                <div class="card-body " >
+                                  <h6 class="card-title"> <img src="../../images/apartmentLogo.svg" style="padding-right: 5px;" alt=""> Shree Properties</h6>
+                                  <h6 class="card-title"> <img src="../../images/locationLogo.svg" style="padding-right: 5px;" alt=""> Vijaynagar, sangli</h6>
+                                  <h6 class="card-title"> <img src="../../images/builderLogo.svg"style="padding-right: 5px;" alt=""> SS Infra</h6>
+                                  <hr>
+                                  <p class="card-title"> <img src="../../images/homeLogo.svg"style="padding-right: 5px;" alt=""> 1BHK, 2BHK</p>
+                                </div>
+                              </div>
+                              </div>
+    
+                    <div class="col-sm-6 col-md-4 col-xl-3  filterDiv sangli gaonbhag">
+                      <div class="card">
+                        <img class="card-img-top" src="../../images/1074402072SHREE PROPERTIES main img.jpg" alt="">
+                          <div class="card-body " >
+                            <h6 class="card-title"> <img src="../../images/apartmentLogo.svg" style="padding-right: 5px;" alt=""> Shree Properties</h6>
+                            <h6 class="card-title"> <img src="../../images/locationLogo.svg" style="padding-right: 5px;" alt=""> Vijaynagar, sangli</h6>
+                            <h6 class="card-title"> <img src="../../images/builderLogo.svg"style="padding-right: 5px;" alt=""> SS Infra</h6>
+                            <hr>
+                            <p class="card-title"> <img src="../../images/homeLogo.svg"style="padding-right: 5px;" alt=""> 1BHK, 2BHK</p>
+                          </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-sm-6 col-md-4 col-xl-3  filterDiv sangli balajiNagar">
+                    <div class="card">
+                      <img class="card-img-top" src="../../images/1074402072SHREE PROPERTIES main img.jpg" alt="">
+                        <div class="card-body " >
+                          <h6 class="card-title"> <img src="../../images/apartmentLogo.svg" style="padding-right: 5px;" alt=""> Shree Properties</h6>
+                          <h6 class="card-title"> <img src="../../images/locationLogo.svg" style="padding-right: 5px;" alt=""> Vijaynagar, sangli</h6>
+                          <h6 class="card-title"> <img src="../../images/builderLogo.svg"style="padding-right: 5px;" alt=""> SS Infra</h6>
+                          <hr>
+                          <p class="card-title"> <img src="../../images/homeLogo.svg"style="padding-right: 5px;" alt=""> 1BHK, 2BHK</p>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="col-sm-6 col-md-4 col-xl-3  filterDiv jaysingpur">
+                      <div class="card">
+                        <img class="card-img-top" src="../../images/1074402072SHREE PROPERTIES main img.jpg" alt="">
+                          <div class="card-body " >
+                            <h6 class="card-title"> <img src="../../images/apartmentLogo.svg" style="padding-right: 5px;" alt=""> Shree Properties</h6>
+                            <h6 class="card-title"> <img src="../../images/locationLogo.svg" style="padding-right: 5px;" alt=""> Vijaynagar, sangli</h6>
+                            <h6 class="card-title"> <img src="../../images/builderLogo.svg"style="padding-right: 5px;" alt=""> SS Infra</h6>
+                            <hr>
+                            <p class="card-title"> <img src="../../images/homeLogo.svg"style="padding-right: 5px;" alt=""> 1BHK, 2BHK</p>
+                          </div>
+                        </div>
+                    </div>
+    
+                  
+    
+                   
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    </div>
+   
+
+
+
+    <!-- footer -->
+    <div class="container-fluid" style="font-family: 'Comfortaa', cursive ; padding: 0px;">
+
+        <section id="footer">
+          <div class="container">
+            <div class="row text-center text-xs-center text-sm-left text-md-left">
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-6 ">
+                    <h5>Quick links</h5>
+                    <ul class="list-unstyled quick-links">
+                      <li><a href="#"><img src="../../images/chevrons-rightLogo.svg">Home</a></li>
+                      <li><a href="../builders.html"><img src="../../images/chevrons-rightLogo.svg">Builders</a></li>
+                      <li><a href="../home-loan.html"><img src="../../images/chevrons-rightLogo.svg">Loan</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-6 socials">
+                    <h5>Connect With Us</h5>
+                  <ul class="list-unstyled quick-links">
+                    <li class="list-inline-item"><a href="https://www.facebook.com/Ghar-Ghya-106420034613589"><img src="../../images/facebookLogo.svg" alt="facebook" style="">  </a></li>
+                    <li class="list-inline-item"><a href="#"><img src="../../images/twitterLogo.svg" alt="twitter"> </a></li>
+                    <li class="list-inline-item"><a href="https://www.instagram.com/ghar.ghya/"><img src="../../images/instagramLogo.svg" alt="insta"></a></li>
+                    <li class="list-inline-item"><a href="#"><img src="../../images/linkedinLogo.svg" alt="linkedin"></a></li>
+                  </ul>
+                  </div><br>
+                  <div class="col-xs-12 col-sm-12 ">
+                    <h5>Have a Question ?</h5>
+                  <ul class="list-unstyled quick-links">
+                    <li class="list-item"><img src="../../images/phoneLogo.svg" alt="">+91 9284088484</li>
+                    <li class="list-item"><img src="../../images/mailLogo.svg" alt="">gharghya99@gmail.com</li>
+                    <li class="list-item"><img src="../../images/map-pin.svg" alt=""> Ichalkaranji & Sangli</li>
+                    </ul>
+                  </div>
+                 
+                </div>
+              </div>
+             
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <h5>Contact Us</h5>
+                <form>
+                  <div class="form-group" >
+                      <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter full name" required>
+                  </div>
+                  <div class="form-group">
+                      <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                  </div>
+                  <div class="form-group">
+                      <input type="text" name = "number" id="number" maxlength="10" minlength="10" size="10" class="form-control" id="exampleInputPassword1" placeholder="Contact number" required>
+                  </div>
+                  <div class="form-group">
+                      <textarea class="form-control" name="msg" id="message" rows="3" placeholder="Write message..." required></textarea>
+                  </div>
+                  
+                  <button type="submit" class="btn btn-light" id="submit">Send</button><br>
+                  <span class="text-warning" id="success_msg"></span>
+                  <span class="text-warning" id="error_msg"></span>
+                </form>
+              </div>
+              
+            </div>
+        
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 mt-5 mb-0 text-center text-white">
+                <p class="h6">© All rights are reserved, GharGhya.com</p>
+                
+              </div>
+            </div>	
+          </div>
+        </section>
+        
+      </div>
+    </div>
+      
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Optional JavaScript -->
+
+    <script>
+      
+    //loader
+    var loader = document.getElementById('loader');
+    var main = document.getElementById('content');
+    var wp = document.getElementById('whatsapp');
+    main.style.display="none";
+    function myfunction(){
+      setTimeout(function(){
+        loader.style.display="none";
+        main.style.display="block";
+      },2000);
+    }
+
+  //contact us form
+    
+  $("form").submit(function(){
+      var post = $('form').serialize();
+      $('#submit').addClass('disabled');
+
+      $.post('../../php/form1.php', post, function(data){
+
+      $("#success_msg").text(data);
+      
+
+    setTimeout(function() {
+          $("#success_msg").fadeOut().empty();
+          }, 3000);
+
+          $('#submit').removeClass('disabled');
+          $('form').trigger("reset");
+          if(data.match('success') != null)
+          {
+              $("#error_msg").text(data);   
+              setTimeout(function() {
+              $("#success_msg").fadeOut().empty();
+              }, 3000);
+          }
+      });
+    return false;
+    });
+
+  </script>
+  </body>
+</html>

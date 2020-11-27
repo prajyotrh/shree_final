@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>GharGhya</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <style>
+
+html{
+        scroll-behavior: smooth;
+      }
+
+      .builder{
+        padding-top: 100px;
+      }
+
+      .flats{
+        padding-top:100px ;
+      }
+
+      .nav-link:hover{
+        font-weight: 700;
+        color: #f1595a !important;
+      }
+
+
+@media(max-width:336px) and (min-width:180px){
+    .navbar{
+        width: 100%;
+    }
+    #brand{
+        height: auto;
+        width: 100px;
+    }
+
+} 
+
+@media(min-width:336px) and (max-width:576px ){
+    
+    #brand{
+        height: auto;
+        width: 150px;
+    }
+}
+@media(min-width:576) and (max-width:767px ){
+    #brand{
+        height: auto;
+        width: 200px;
+    }
+}
+
+@media(min-width:767) and (max-width:1200px ){
+    #brand{
+        height: auto;
+        width: 200px;
+    }
+}
+
+@media (max-width:767px){
+    #footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}
+
+.outer{
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+}
+.outer #myBtnContainer{
+    margin-top: 50px;
+    display: inline-block;
+    
+}
+
+.outer #sangliBtn{
+    display: inline-block;
+}
+
+.outer .header{
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+
+           /* Footer */
+section {
+    padding-top: 30px ;
+    padding-bottom: 10px;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer {
+        background: #007b5e !important; 
+}
+#footer h5{
+  font-weight: 600;
+    padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+    padding: 3px 0;
+    
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+    font-size:25px;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+    font-size:30px;
+    margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+    color:#ffffff;
+}
+
+#footer ul.quick-links li{
+    color :white;
+}
+#footer ul.quick-links li img{
+   margin-right: 10px;
+}
+
+#footer .socials li img{
+    background-color: #40b99d;
+    border-radius: 100%;
+    padding: 5px;
+}
+
+#footer ul.social li a:hover{
+    color:#eeeeee;
+}
+#footer ul.quick-links li{
+    padding: 3px 0;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+    padding: 3px 0;
+    margin-left:5px;
+    font-weight:500;
+}
+#footer ul.quick-links li a i{
+    margin-right: 10px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+/* media */
+
+.media:hover{
+  transform: scale(1.03);
+}
+
+
+
+
+    </style>
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body style="font-family: 'Comfortaa', cursive ;" onload="myfunction()">
+
+     <!-- loader -->
+     <div class="spinner-grow text-danger text-center" role="status" id="loader" style="  margin: auto;
+     position: absolute;
+     top: 0; left: 0; bottom: 0; right: 0;" >
+       <span class="sr-only">Loading...</span>
+     </div>
+ 
+       <div id="content">
+ 
+
+     <!-- navbar -->
+ <div class="container-fluid">
+
+        
+         <div class="container">
+            <nav class="navbar navbar-expand-md  navbar-light bg-light shadow fixed-top">
+              <a class="navbar-brand " href="#" ><img src="../images/GharGhya_Final_crop.png" id="brand"  height="auto" width="300px" alt=""></a>
+              <button class="navbar-toggler d-md-none d-lg-none bg-dark " type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                  aria-expanded="false" aria-label="Toggle navigation"><img src="../images/menu.svg"></button>
+              <div class="collapse navbar-collapse" id="collapsibleNavId">
+                  <ul class="navbar-nav ml-auto  mt-2 mt-lg-0">
+                      <li class="nav-item mr-2">
+                          <a class="nav-link" href="#" style="color: black;">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item mr-2">
+                        <a class="nav-link " href="../html/home-loan.html" style="color: black;">Loans <span class="sr-only">(current)</span></a>
+                    </li>
+                     
+                      <li class="nav-item mr-2">
+                          <a class="nav-link" href="#footer" style="color: black;">Contact Us</a>
+                      </li>
+                  </ul>
+              </div>
+          </nav>
+        </div>
+
+    </div> 
+
+    <!-- builders -->
+    <div class="container-fluid bg-light " style="padding-top:30px" >
+        
+        <div class="container">
+
+            <div class="outer">
+                <div class="header">
+                  builders & developers
+                  
+                  <hr style=" position: relative; 
+                  border: none; 
+                  height: 4px;
+                  width: 200px;
+                  border-radius: 4px; 
+                  background: #f1595a; ">
+                </div>
+               
+                
+            </div>
+
+            <div class="row" style="padding-bottom:100px;padding-top: 80px;">
+
+                <div class="col-sm-6 col-md-4 col-xl-3 mb-5  filterDiv sangli ">
+                    <div class="media shadow" data-toggle="collapse" href="#vaze" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <a class="d-flex align-self-bottom" href="#">
+                            <img src="../images/apartmentLogo.svg" class="m-2" height="auto" width="48px" alt="">
+                        </a>
+                        <div class="media-body m-2 ">
+                          <h5>V.D.Vaje Builders</h5>
+                        </div>
+                      </div>
+                      <div class="collapse" id="vaze">
+                        <div class="card card-body ml-auto shadow mb-5">
+                          <h5 class="mr-auto">Ongoing Projects</h5>
+      
+                          <ul class="list-group ">
+                            <li class="text-left ml-3"><a href="/html/details.html">Signature Gold</a></li>
+                            <li class="text-left ml-3"><a href="/html/details.html">Shree Vastupuram </a></li>
+      
+                            </ul>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-xl-3 mb-5 filterDiv sangli ">
+                    <div class="media shadow" data-toggle="collapse" href="#vaze" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <a class="d-flex align-self-bottom" href="#">
+                            <img src="../images/apartmentLogo.svg" class="m-2" height="auto" width="48px" alt="">
+                        </a>
+                        <div class="media-body m-2 ">
+                          <h5>V.D.Vaje Builders</h5>
+                        </div>
+                      </div>
+                      <div class="collapse" id="vaze">
+                        <div class="card card-body ml-auto shadow mb-5">
+                          <h5 class="mr-auto">Ongoing Projects</h5>
+      
+                          <ul class="list-group ">
+                            <li class="text-left ml-3"><a href="/html/details.html">Signature Gold</a></li>
+                            <li class="text-left ml-3"><a href="/html/details.html">Shree Vastupuram </a></li>
+      
+                            </ul>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-xl-3 mb-5 filterDiv sangli ">
+                    <div class="media shadow" data-toggle="collapse" href="#vaze" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <a class="d-flex align-self-bottom" href="#">
+                            <img src="../images/apartmentLogo.svg" class="m-2" height="auto" width="48px" alt="">
+                        </a>
+                        <div class="media-body m-2 ">
+                          <h5>V.D.Vaje Builders</h5>
+                        </div>
+                      </div>
+                      <div class="collapse" id="vaze">
+                        <div class="card card-body ml-auto shadow mb-5">
+                          <h5 class="mr-auto">Ongoing Projects</h5>
+      
+                          <ul class="list-group ">
+                            <li class="text-left ml-3"><a href="/html/details.html">Signature Gold</a></li>
+                            <li class="text-left ml-3"><a href="/html/details.html">Shree Vastupuram </a></li>
+      
+                            </ul>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-xl-3 mb-5 filterDiv sangli ">
+                    <div class="media shadow" data-toggle="collapse" href="#vaze" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <a class="d-flex align-self-bottom" href="#">
+                            <img src="../images/apartmentLogo.svg" class="m-2" height="auto" width="48px" alt="">
+                        </a>
+                        <div class="media-body m-2 ">
+                          <h5>V.D.Vaje Builders</h5>
+                        </div>
+                      </div>
+                      <div class="collapse" id="vaze">
+                        <div class="card card-body ml-auto shadow mb-5">
+                          <h5 class="mr-auto">Ongoing Projects</h5>
+      
+                          <ul class="list-group ">
+                            <li class="text-left ml-3"><a href="/html/details.html">Signature Gold</a></li>
+                            <li class="text-left ml-3"><a href="/html/details.html">Shree Vastupuram </a></li>
+      
+                            </ul>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-xl-3 mb-5 filterDiv sangli ">
+                    <div class="media shadow" data-toggle="collapse" href="#vaze" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <a class="d-flex align-self-bottom" href="#">
+                            <img src="../images/apartmentLogo.svg" class="m-2" height="auto" width="48px" alt="">
+                        </a>
+                        <div class="media-body m-2 ">
+                          <h5>V.D.Vaje Builders</h5>
+                        </div>
+                      </div>
+                      <div class="collapse" id="vaze">
+                        <div class="card card-body ml-auto shadow mb-5">
+                          <h5 class="mr-auto">Ongoing Projects</h5>
+      
+                          <ul class="list-group ">
+                            <li class="text-left ml-3"><a href="/html/details.html">Signature Gold</a></li>
+                            <li class="text-left ml-3"><a href="/html/details.html">Shree Vastupuram </a></li>
+      
+                            </ul>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-xl-3 mb-5 filterDiv sangli ">
+                    <div class="media shadow" data-toggle="collapse" href="#vaze" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <a class="d-flex align-self-bottom" href="#">
+                            <img src="../images/apartmentLogo.svg" class="m-2" height="auto" width="48px" alt="">
+                        </a>
+                        <div class="media-body m-2 ">
+                          <h5>V.D.Vaje Builders</h5>
+                        </div>
+                      </div>
+                      <div class="collapse" id="vaze">
+                        <div class="card card-body ml-auto shadow mb-5">
+                          <h5 class="mr-auto">Ongoing Projects</h5>
+      
+                          <ul class="list-group ">
+                            <li class="text-left ml-3"><a href="/html/details.html">Signature Gold</a></li>
+                            <li class="text-left ml-3"><a href="/html/details.html">Shree Vastupuram </a></li>
+      
+                            </ul>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-xl-3 mb-5 filterDiv sangli ">
+                    <div class="media shadow" data-toggle="collapse" href="#vaze" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <a class="d-flex align-self-bottom" href="#">
+                            <img src="../images/apartmentLogo.svg" class="m-2" height="auto" width="48px" alt="">
+                        </a>
+                        <div class="media-body m-2 ">
+                          <h5>V.D.Vaje Builders</h5>
+                        </div>
+                      </div>
+                      <div class="collapse" id="vaze">
+                        <div class="card card-body ml-auto shadow mb-5">
+                          <h5 class="mr-auto">Ongoing Projects</h5>
+      
+                          <ul class="list-group ">
+                            <li class="text-left ml-3"><a href="/html/details.html">Signature Gold</a></li>
+                            <li class="text-left ml-3"><a href="/html/details.html">Shree Vastupuram </a></li>
+      
+                            </ul>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-xl-3 mb-5 filterDiv sangli ">
+                    <div class="media shadow" data-toggle="collapse" href="#vaze" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <a class="d-flex align-self-bottom" href="#">
+                            <img src="../images/apartmentLogo.svg" class="m-2" height="auto" width="48px" alt="">
+                        </a>
+                        <div class="media-body m-2 ">
+                          <h5>V.D.Vaje Builders</h5>
+                        </div>
+                      </div>
+                      <div class="collapse" id="vaze">
+                        <div class="card card-body ml-auto shadow mb-5">
+                          <h5 class="mr-auto">Ongoing Projects</h5>
+      
+                          <ul class="list-group ">
+                            <li class="text-left ml-3"><a href="/html/details.html">Signature Gold</a></li>
+                            <li class="text-left ml-3"><a href="/html/details.html">Shree Vastupuram </a></li>
+      
+                            </ul>
+                        </div>
+                      </div>
+                </div>
+
+            </div>
+                       
+
+        </div>
+
+    </div>
+
+    <div class="container-fluid" style="font-family: 'Comfortaa', cursive ; padding: 0px;">
+
+      <section id="footer">
+        <div class="container">
+          <div class="row text-center text-xs-center text-sm-left text-md-left">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 ">
+                  <h5>Quick links</h5>
+                  <ul class="list-unstyled quick-links">
+                    <li><a href="#"><img src="../images/chevrons-rightLogo.svg">Home</a></li>
+                    <li><a href="../html/home-loan.html"><img src="../images/chevrons-rightLogo.svg">Loans</a></li>
+                  </ul>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 socials">
+                  <h5>Connect With Us</h5>
+                <ul class="list-unstyled quick-links">
+                  <li class="list-inline-item"><a href="https://www.facebook.com/Ghar-Ghya-106420034613589"><img src="../images/facebookLogo.svg" alt="facebook" style="">  </a></li>
+                  <li class="list-inline-item"><a href="#"><img src="../images/twitterLogo.svg" alt="twitter"> </a></li>
+                  <li class="list-inline-item"><a href="https://www.instagram.com/ghar.ghya/"><img src="../images/instagramLogo.svg" alt="insta"></a></li>
+                  <li class="list-inline-item"><a href="#"><img src="../images/linkedinLogo.svg" alt="linkedin"></a></li>
+                </ul>
+                </div><br>
+                <div class="col-xs-12 col-sm-12 ">
+                  <h5>Have a Question ?</h5>
+                <ul class="list-unstyled quick-links">
+                  <li class="list-item"><img src="../images/phoneLogo.svg" alt="">+91 9284088484</li>
+                  <li class="list-item"><img src="../images/mailLogo.svg" alt="">gharghya99@gmail.com</li>
+                  <li class="list-item"><img src="../images/map-pin.svg" alt=""> Ichalkaranji & Sangli</li>
+                  </ul>
+                </div>
+               
+              </div>
+            </div>
+           
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <h5>Contact Us</h5>
+              <form id="form">
+                <div class="form-group" >
+                    <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter full name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name = "number" id="number" maxlength="10" minlength="10" size="10" class="form-control" id="exampleInputPassword1" placeholder="Contact number" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="msg" id="message" rows="3" placeholder="Write message..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-light" id="submit">Send</button><br>
+                <span class="text-warning text-center" id="success_msg" ></span>
+                <span class="text-warning text-center" id="error_msg" ></span>
+            </form>
+            </div>
+            
+          </div>
+      
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-5 mb-0 text-center text-white">
+              <p class="h6">© All rights are reserved, GharGhya.com</p>
+              
+            </div>
+          </div>	
+        </div>
+      </section>
+      
+    </div>
+
+    </div>
+      
+   
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+     <!-- Optional JavaScript -->
+     <script>
+      
+      //loader
+  
+      var loader = document.getElementById('loader');
+      var main = document.getElementById('content');
+      var wp = document.getElementById('whatsapp');
+      main.style.display="none";
+      function myfunction(){
+        setTimeout(function(){
+          loader.style.display="none";
+          main.style.display="block";
+        },2000);
+      
+      }
+  
+      // contact us
+      $("#form").submit(function(){
+  
+      var post = $('form').serialize();
+      $('#submit').addClass('disabled');
+  
+      $.post('../php/form1.php', post, function(data){
+  
+      $("#success_msg").text(data);
+  
+  
+      setTimeout(function() {
+          $("#success_msg").fadeOut().empty();
+          }, 3000);
+  
+          $('#submit').removeClass('disabled');
+          $('form').trigger("reset");
+          if(data.match('success') != null)
+          {
+              $("#error_msg").text(data);   
+              setTimeout(function() {
+              $("#success_msg").fadeOut().empty();
+              }, 10000);
+          }
+      });
+      return false;
+      });
+  
+      </script>
+  
+
+  </body>
+</html>
