@@ -78,7 +78,7 @@ html{
       
   .media:hover + .collapse {
     display: block;
-    
+    cursor: pointer;
   }
   .media h5{
       text-align: center;

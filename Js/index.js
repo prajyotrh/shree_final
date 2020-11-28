@@ -115,6 +115,7 @@ function search(){
 }
 
 /* whatsapp chat */
+document.getElementById('chat').style.display= "none";
 window.onload = function(){
   document.getElementById('chat').style.display= "none";
 document.getElementById('whatsapp').addEventListener("click",function(){
