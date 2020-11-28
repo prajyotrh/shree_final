@@ -444,6 +444,75 @@
 
             <div class="card text-left shadow mt-5 mb-5">
               <div class="card-body">
+                <h4 class="card-title text-center">Contact Details
+                  <hr class="ml-auto mr-auto" style=" position: relative; 
+                  border: none; 
+                  height: 4px;
+                  width: 100px;
+                  border-radius: 4px; 
+                  background: #f1595a; ">
+                </h4>
+                
+                <h6><b>Office Address :</b></h6>
+
+                <h6 >Shivam Developers</h6>
+                <p class="text-muted">
+                  Anna Satyagonda Patil Nagar, Near ST stand, Sangli.</p>
+
+                 
+                  
+                  <p class="text-muted"><b>D. B. Shinde</b></p>
+                  <!-- <p><img src="../../images/flats-in-sangli-phone.svg" alt="" height="24px" width="24px"> 9423036234 </p> -->
+                  
+                  <p class="text-muted"><B>Rajendra Shinde</B></p>
+                  <!-- <p><img src="../../images/flats-in-sangli-phone.svg" alt="" height="24px" width="24px"> 9225812830 </p> -->
+
+                  <p class="text-muted"><b>Pritam Shinde</b></p>
+                  <!-- <p><img src="../../images/flats-in-sangli-phone.svg" alt="" height="24px" width="24px"> 9960021490 </p> -->  
+                                 
+              </div>
+            </div>
+
+            <div class="card text-left shadow mt-5 mb-5">
+              <div class="card-body">
+                <h4 class="card-title text-center">Interested in project ?
+                  <hr class="ml-auto mr-auto" style=" position: relative; 
+                  border: none; 
+                  height: 4px;
+                  width: 100px;
+                  border-radius: 4px; 
+                  background: #f1595a; ">
+                </h4>
+                
+                <div class="col-xs-12">
+                 
+                  <form id="intrested_form" method="POST" name="google-sheet">
+                    <div class="form-group" >
+                        <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter full name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name = "contact_no" id="number" maxlength="10" minlength="10" size="10" class="form-control" id="exampleInputPassword1" placeholder="Contact number" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="apartment" id="message" rows="3" placeholder="Type name of apartment..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-light" id="submit_project">Send</button><br>
+                    <span class="text-warning" id="success_msg"></span>
+                    <span class="text-warning" id="error_msg"></span>
+                </form>
+                </div>
+                                                
+              </div>
+            </div>
+
+
+
+            <div class="card text-left shadow mt-5 mb-5">
+              <div class="card-body">
                 <h4 class="card-title text-center">Home Loan
                   <hr class="ml-auto mr-auto" style=" position: relative; 
                   border: none; 
@@ -550,6 +619,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
       <!-- Optional JavaScript -->
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxXVdD2aC417SMNwF9qyeXUXrF9R_CrZBI9BOxf5huOXM0--j4Z/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
       <script>
       
         //loader
