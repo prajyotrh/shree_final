@@ -71,15 +71,14 @@ html{
   }
 
   .collapse:hover{
-      display: inline;
-      transition: ease-in-out 1s!important;
+      display: block!important;
+      
       
   }
       
   .media:hover + .collapse {
     display: block;
     
-
   }
   .media h5{
       text-align: center;
