@@ -22,92 +22,184 @@
             overflow: hidden;
         }
             /* Footer */
-section {
-    padding-top: 30px ;
-    padding-bottom: 10px;
-}
+        section {
+            padding-top: 30px ;
+            padding-bottom: 10px;
+        }
 
-section .section-title {
-    text-align: center;
-    color: #007b5e;
-    margin-bottom: 50px;
-    text-transform: uppercase;
-}
-#footer {
-        background: #007b5e !important; 
-}
-#footer h5{
-    font-weight: 600;
-    padding-left: 10px;
-    border-left: 3px solid #eeeeee;
-    padding-bottom: 6px;
-    margin-bottom: 20px;
-    color:#ffffff;
-}
-#footer a {
-    color: #ffffff;
-    text-decoration: none !important;
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
-}
-#footer ul.social li{
-    padding: 3px 0;
+        section .section-title {
+            text-align: center;
+            color: #007b5e;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+        #footer {
+                background: #007b5e !important; 
+        }
+        #footer h5{
+            font-weight: 600;
+            padding-left: 10px;
+            border-left: 3px solid #eeeeee;
+            padding-bottom: 6px;
+            margin-bottom: 20px;
+            color:#ffffff;
+        }
+        #footer a {
+            color: #ffffff;
+            text-decoration: none !important;
+            background-color: transparent;
+            -webkit-text-decoration-skip: objects;
+        }
+        #footer ul.social li{
+            padding: 3px 0;
+            
+        }
+        #footer ul.social li a i {
+            margin-right: 5px;
+            font-size:25px;
+            -webkit-transition: .5s all ease;
+            -moz-transition: .5s all ease;
+            transition: .5s all ease;
+        }
+        #footer ul.social li:hover a i {
+            font-size:30px;
+            margin-top:-10px;
+        }
+        #footer ul.social li a,
+        #footer ul.quick-links li a{
+            color:#ffffff;
+        }
+
+        #footer ul.quick-links li{
+            color :white;
+        }
+        #footer ul.quick-links li img{
+        margin-right: 10px;
+        }
+
+        #footer .socials li img{
+            background-color: #40b99d;
+            border-radius: 100%;
+            padding: 5px;
+        }
+
+        #footer ul.social li a:hover{
+            color:#eeeeee;
+        }
+        #footer ul.quick-links li{
+            padding: 3px 0;
+            -webkit-transition: .5s all ease;
+            -moz-transition: .5s all ease;
+            transition: .5s all ease;
+        }
+        #footer ul.quick-links li:hover{
+            padding: 3px 0;
+            margin-left:5px;
+            font-weight:500;
+        }
+        #footer ul.quick-links li a i{
+            margin-right: 10px;
+        }
+        #footer ul.quick-links li:hover a i {
+            font-weight: 700;
+        }
+
+        /* whatsapp */
+
+    .chat{
+        position: fixed !important;
+        right: 0px !important;
+        bottom: 0px !important;
+        z-index: 5;
+        margin-right: 10px;
+        margin-bottom: 90px;
+    }
+
+    .chat input:focus{
+        outline: none;
+    }
+
+    .chat #close:focus{
+        transform: scale(1.03);
+        outline: none;
+    }
+
+
+
+    .whatsapp {
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        padding-right: 5px;
+        z-index: 5;
+    }
+    .whatsapp h5 :hover{
+        transform: scale(1.1);
+    }
+    .whatsapp h5 {
+        color: #20b20f;
     
-}
-#footer ul.social li a i {
-    margin-right: 5px;
-    font-size:25px;
-    -webkit-transition: .5s all ease;
-    -moz-transition: .5s all ease;
-    transition: .5s all ease;
-}
-#footer ul.social li:hover a i {
-    font-size:30px;
-    margin-top:-10px;
-}
-#footer ul.social li a,
-#footer ul.quick-links li a{
-    color:#ffffff;
-}
-
-#footer ul.quick-links li{
-    color :white;
-}
-#footer ul.quick-links li img{
-   margin-right: 10px;
-}
-
-#footer .socials li img{
-    background-color: #40b99d;
-    border-radius: 100%;
-    padding: 5px;
-}
-
-#footer ul.social li a:hover{
-    color:#eeeeee;
-}
-#footer ul.quick-links li{
-    padding: 3px 0;
-    -webkit-transition: .5s all ease;
-    -moz-transition: .5s all ease;
-    transition: .5s all ease;
-}
-#footer ul.quick-links li:hover{
-    padding: 3px 0;
-    margin-left:5px;
-    font-weight:500;
-}
-#footer ul.quick-links li a i{
-    margin-right: 10px;
-}
-#footer ul.quick-links li:hover a i {
-    font-weight: 700;
-}
+    }
 
 
     </style>
     </head>
   <body>
+
+    
+      <!-- whatsapp -->
+
+      <div class="card chat" data-aos="fade-down" id="chat" style="height: auto; width: 360px; z-index: 100px!important; display: none; border-radius: 20px;overflow: hidden;" >
+        <div class="card-header" style="height: 100px; padding: 24px 20px; background-color: #095e54;overflow: hidden;">
+            <button type="button" class="close border-0 " aria-label="Close" id="close">
+                <img src="images/x.svg" alt="" height="24px">
+              </button>
+            <div class="row" >
+                <div class="col-2"><img src="../images/whatsapp-dp.png" height="52px" width="52px" style="border-radius: 50%;" alt=""></div>
+                <div class="col-10" style="padding-left: 40px;color: white;">
+                    <div class="row" style="font-weight:500; font-size:20px;">Home Loan</div>
+                    <div class="row">Online</div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="card-body" style="background-image: url('../images/whatsapp-bg.png');">
+            
+            <div class="card p-4 "  style="border-radius: 10px;width: fit-content;">
+                <div class="row" style="font-weight: 600;">
+                    Home Loan
+                </div>
+                <div class="row">
+                    Welcome to HDFC housing.
+                </div>
+                <div class="row">
+                    Do you have requirement of loan ? <br>
+                    then you are at right place.
+
+                </div>
+                
+            </div>
+            <div class="card p-4 mt-2"  style="border-radius: 10px;width: fit-content;">
+                <div class="row">
+                    Please enter your details like profession, salery etc. Thank you
+
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-footer text-muted bg-white" style="padding-left: 20px!important;">
+            <div class="row pb-0">
+                <div class="col-9"><input type="text" class="form-control " style="border-radius: 20px;" id="msg" aria-describedby="helpId" placeholder="Type message..."></div>
+                <div class="col-3"><button id="send" type="button" class="btn btn-info" style="border-radius: 100%; background-color: #095e54;"><img src="../images/send (2).svg" height="24px"  alt=""></button></div>
+            </div>    
+        </div>
+    </div>
+
+    
+      <div class="whatsapp" id="whatsapp">
+        <h5 style="overflow-y: hidden;"><img src="../images/whatsapp.svg" alt=""></h5>
+    </div>
+
 
     <div class="container-fluid bg-light " style="padding: 0px;">
 
@@ -261,31 +353,7 @@ section .section-title {
        
     </div>
 
-    <!-- Load Facebook SDK for JavaScript -->
-    <div id="fb-root"></div>
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v9.0'
-        });
-      };
-
-      (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-    <!-- Your Chat Plugin code -->
-    <div class="fb-customerchat"
-      attribution=setup_tool
-      page_id="103124091470596">
-    </div>
     
-
       
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -319,6 +387,26 @@ section .section-title {
         });
         return false;
         });
+
+        /* whatsapp chat */
+        document.getElementById('chat').style.display= "none";
+        window.onload = function(){
+        document.getElementById('chat').style.display= "none";
+        document.getElementById('whatsapp').addEventListener("click",function(){
+        document.getElementById('chat').style.display ="block";
+        });
+
+        document.getElementById('close').addEventListener("click",function(){
+        document.getElementById('chat').style.display="none";
+        });
+
+
+        document.getElementById('send').addEventListener("click",function(){
+        var msg = document.getElementById('msg').value;
+        window.location="https://api.whatsapp.com/send/?phone=919527395708&text="+msg;
+        });
+        }
+
 
     </script>
 </body>
