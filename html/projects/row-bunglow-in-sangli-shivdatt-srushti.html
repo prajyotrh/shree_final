@@ -198,7 +198,7 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId" style="font-family: 'Comfortaa', cursive ;">
                 <ul class="navbar-nav ml-auto  mt-2 mt-lg-0">
                     <li class="nav-item mr-2">
-                        <a class="nav-link" href="#" style="color: black;">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="../../index.html" style="color: black;">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item mr-2">
                         <a class="nav-link" href="#footer" style="color: black;">Contact Us</a>
@@ -326,6 +326,43 @@
                 </div>
               </div>
 
+              <div class="card text-left shadow mt-5 mb-5">
+                <div class="card-body">
+                  <h4 class="card-title text-center">Interested in project ?
+                    <hr class="ml-auto mr-auto" style=" position: relative; 
+                    border: none; 
+                    height: 4px;
+                    width: 100px;
+                    border-radius: 4px; 
+                    background: #f1595a; ">
+                  </h4>
+                  
+                  <div class="col-xs-12">
+                   
+                    <form id="intrested_form" method="POST" name="google-sheet">
+                      <div class="form-group" >
+                          <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter full name" required>
+                      </div>
+                      <div class="form-group">
+                          <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                      </div>
+                      <div class="form-group">
+                          <input type="text" name = "contact_no" id="number" maxlength="10" minlength="10" size="10" class="form-control" id="exampleInputPassword1" placeholder="Contact number" required>
+                      </div>
+                      <div class="form-group">
+                          <textarea class="form-control" name="apartment" id="message" rows="3" placeholder="Type name of apartment..." required></textarea>
+                      </div>
+                      
+                      <button type="submit" class="btn btn-light" id="submit_project">Send</button><br>
+                      <span class="text-warning" id="success_msg"></span>
+                      <span class="text-warning" id="error_msg"></span>
+                  </form>
+                  </div>
+                                                  
+                </div>
+              </div>
+  
+
 
 
           </div>
@@ -379,6 +416,28 @@
 
             <div class="card text-left shadow mt-5 mb-5">
               <div class="card-body">
+                <h4 class="card-title text-center"> Site Details 
+                  <hr class="ml-auto mr-auto" style=" position: relative; 
+                  border: none; 
+                  height: 4px;
+                  width: 100px;
+                  border-radius: 4px; 
+                  background: #f1595a; ">
+                </h4>
+                <div class="row">
+                    
+                    <div class="col" >
+                       <P><img src="../../images/bookmark.svg"> Plot area :<span style="color: #f1595a; font-weight: 700;padding-left: 10px;">1200 sq.ft</span></P>
+                       <P><img src="../../images/bookmark.svg"> Carpet area : <span style="color: #f1595a; font-weight: 700;padding-left: 10px;">1136 sq.ft</span></P>
+                       <P><img src="../../images/bookmark.svg"> No. of flats : <span style="color: #f1595a; font-weight: 700;padding-left: 10px;">5</span></P>
+                    </div>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="card text-left shadow mt-5 mb-5">
+              <div class="card-body">
                 <h4 class="card-title text-center">Contact Details
                   <hr class="ml-auto mr-auto" style=" position: relative; 
                   border: none; 
@@ -411,42 +470,7 @@
               </div>
             </div>
 
-            <div class="card text-left shadow mt-5 mb-5">
-              <div class="card-body">
-                <h4 class="card-title text-center">Interested in project ?
-                  <hr class="ml-auto mr-auto" style=" position: relative; 
-                  border: none; 
-                  height: 4px;
-                  width: 100px;
-                  border-radius: 4px; 
-                  background: #f1595a; ">
-                </h4>
-                
-                <div class="col-xs-12">
-                 
-                  <form id="intrested_form" method="POST" name="google-sheet">
-                    <div class="form-group" >
-                        <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter full name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name = "contact_no" id="number" maxlength="10" minlength="10" size="10" class="form-control" id="exampleInputPassword1" placeholder="Contact number" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" name="apartment" id="message" rows="3" placeholder="Type name of apartment..." required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-light" id="submit_project">Send</button><br>
-                    <span class="text-warning" id="success_msg"></span>
-                    <span class="text-warning" id="error_msg"></span>
-                </form>
-                </div>
-                                                
-              </div>
-            </div>
-
+         
 
             <div class="card text-left shadow mt-5 mb-5">
               <div class="card-body">
@@ -485,7 +509,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-6 ">
                   <h5>Quick links</h5>
                   <ul class="list-unstyled quick-links">
-                    <li><a href="#"><img src="../../images/chevrons-rightLogo.svg">Home</a></li>
+                    <li><a href="../../index.html"><img src="../../images/chevrons-rightLogo.svg">Home</a></li>
                     <li><a href="../builders-developers-in-sangli-miraj-kupwad-jaysingpur.html"><img src="../../images/chevrons-rightLogo.svg">Builders</a></li>
                     <li><a href="../../index.html#project"><img src="../../images/chevrons-rightLogo.svg">Projects</a></li>
                     <li><a href="../home-loan.html"><img src="../../images/chevrons-rightLogo.svg">Loan</a></li>
