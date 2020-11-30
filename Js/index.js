@@ -1,4 +1,4 @@
-
+var res = document.querySelectorAll('.filter');
 
 /* contact form*/
 $("form").submit(function(){
@@ -28,31 +28,68 @@ return false;
 });
 
 /* dropdown list */
-function addon(city,area){
-  var ct = document.getElementById('city');
-  var loc = document.getElementById('area');
 
-  if(ct.value == "sangli"){
-    var optionArray = ["vishrambag|Vishrambag","dhamaniRoad|Dhamani Road"];
+var city ={
+  city :["area|Area"],
+  sangli:["area|Area","vishrambag|Vishrambag","dhamaniRoad|Dhamani Road"],
+  miraj:["area|Area"],
+  jaysingpur:["area|Area"],
+  kupwad:["area|Area"]
+};
+
+var main = document.getElementById('city');
+var sub = document.getElementById('area');
+
+main.addEventListener('change',function(){
+  
+  var selected_option = city[this.value];
+
+  //remove options
+  while(sub.length > 0){
+    sub.options.remove(0);
   }
 
-  for(var option in optionArray){
-    var pair = optionArray[option].split("|");
-    var newOption = document.createElement("option");
-    newOption.value = pair[0];
-    newOption.innerHTML=pair[1];
-    loc.options.add(newOption);
-  }
+  // add selected elements data
+  Array.from(selected_option).forEach(function(el){
 
-}
+    // console.log(el);
+
+    var pair = el.split("|");
+    
+    let option = new Option(pair[1],pair[0]);
+
+    sub.appendChild(option);
+
+  });
+
+});
 
 /* filter function*/
 function search(){
-
+  
   /* taking input */
   var city = document.getElementById('city').value;
   var area = document.getElementById('area').value;
   var flatType = document.getElementById('flatType').value;
+
+  /* clearing div */
+  const container = document.querySelector('#abs');
+  removeAllChildNodes(container);
+
+  function removeAllChildNodes(parent) {
+      while (parent.firstChild) {
+          parent.removeChild(parent.firstChild);
+      }
+  }
+
+  /* appending items to div */
+  if(res.length > 0){
+    res.forEach(myfun);
+    function myfun(item){
+      // console.log(item);
+      document.getElementById('abs').appendChild(item);
+    }
+  }
 
 
   /* creating classname */
@@ -79,36 +116,38 @@ function search(){
 
   var alt = $('<div class="col-12 alert alert-danger text-center" role="alert">Sorry, no result found !</div>');
   
-  var res = document.querySelectorAll(className);
+  var xyz = document.querySelectorAll(className);
 
-  console.log(res);
-
-
-  /* clearing div */
-  const container = document.querySelector('#abs');
-  removeAllChildNodes(container);
-
-  function removeAllChildNodes(parent) {
-      while (parent.firstChild) {
-          parent.removeChild(parent.firstChild);
-      }
-  }
+    /* clearing div */
+     const container1 = document.querySelector('#abs');
+    removeAllChildNodes(container1);
   
+    function removeAllChildNodes(parent) {
+        while (parent.firstChild) {
+            parent.removeChild(parent.firstChild);
+        }
+    }
+  
+  
+
+ 
+
+   
+  
+  // console.log(xyz);
 
 
   /* appending items to div */
-  if(res.length == 0){
-    alt.appendTo('#abs');
-  }
-  else{
-    res.forEach(myfun);
+  if(xyz.length > 0){
+    xyz.forEach(myfun);
     function myfun(item){
-      console.log(item);
+     
       document.getElementById('abs').appendChild(item);
     }
   }
-
-    
+  else{
+    $("#abs").append(alt);
+  }
 
   document.getElementById('flats').style.display="none";
 
@@ -132,6 +171,3 @@ document.getElementById('send').addEventListener("click",function(){
   window.location="https://api.whatsapp.com/send/?phone=919284088484&text="+msg;
 });
 }
-
-// var chat = document.getElementsById('whatsapp');
-// chat.a.href+=msg;
