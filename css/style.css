@@ -338,6 +338,10 @@ section .section-title {
     font-weight: 700;
 }
 
+#footer .privacy_policy a:hover{
+    color:#9e1713;
+    font-weight: 700;
+}
 
 
 @media(max-width:336px) and (min-width:180px){
