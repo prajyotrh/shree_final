@@ -31,7 +31,7 @@ return false;
 
 var city ={
   city :["area|Area"],
-  sangli:["area|Area","vishrambag|Vishrambag","dhamaniRoad|Dhamani Road"],
+  sangli:["area|Area","vishrambag|Vishrambag","dhamaniRoad|Dhamani Road","vijaynagar|Vijaynagar"],
   miraj:["area|Area"],
   jaysingpur:["area|Area"],
   kupwad:["area|Area"]
